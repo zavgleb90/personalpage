@@ -1,0 +1,158 @@
+:root{
+  --max: 980px;
+  --pad: 18px;
+  --radius: 14px;
+  --border: #e7e7e7;
+  --muted: rgba(0,0,0,.72);
+  --muted2: rgba(0,0,0,.58);
+  --bg: #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #111;
+}
+
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 28px var(--pad);
+}
+
+.header{
+  display:flex;
+  gap: 18px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+
+.titleblock h1{
+  margin: 0;
+  font-size: 2.05rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle{
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.meta{
+  margin: 10px 0 0;
+  color: var(--muted2);
+  font-size: .98rem;
+}
+
+.nav{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 520px;
+}
+
+.nav a{
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #111;
+  font-size: .95rem;
+}
+
+.nav a:hover{ text-decoration: underline; }
+
+.grid{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 14px;
+}
+
+@media (max-width: 860px){
+  .grid{ grid-template-columns: 1fr; }
+  .nav{ justify-content: flex-start; }
+}
+
+.card{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin: 14px 0;
+  background: #fff;
+}
+
+h2{
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+
+h3{
+  margin: 16px 0 8px;
+  font-size: 1.05rem;
+}
+
+p{ margin: 10px 0; }
+
+ul{
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+li{ margin: 6px 0; }
+
+.pillrow{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.pill{
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: .92rem;
+  color: var(--muted);
+  background: #fff;
+}
+
+.links a{ margin-right: 10px; }
+
+.small{
+  color: var(--muted2);
+  font-size: .95rem;
+}
+
+.footer{
+  margin-top: 18px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  color: var(--muted2);
+  font-size: .95rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.kicker{
+  color: var(--muted2);
+  font-size: .95rem;
+  margin-top: 2px;
+}
+
+.pubs li{ margin-bottom: 10px; }
+
+.nowrap{ white-space: nowrap; }
